@@ -1,5 +1,7 @@
 package com.example.simpleparadox.listycity;
 
+import android.util.Log;
+
 import org.junit.jupiter.api.Test;
 
 
@@ -92,5 +94,20 @@ class CityListTest {
         CityList cityList = mockCityList();
 
         assertEquals(1, cityList.countCities());
+    }
+
+    @Test
+    void testReversedCitySorting() {
+        CityList cityList = mockCityList();
+
+        cityList.add(new City("Charlottetown", "Prince Edward Island"));
+        cityList.add(new City("Victoria", "British Columbia"));
+
+
+        City prevFirst = cityList.getCities().get(0);
+
+        City currentFirst = cityList.getCitiesReverse().get(0);
+
+        assertNotEquals(0, prevFirst.compareTo(currentFirst));
     }
 }
