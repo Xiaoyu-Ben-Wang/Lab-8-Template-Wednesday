@@ -86,6 +86,7 @@ public class CityList {
     public List<City> getCitiesReverse(){
         List<City> list = cities;
         Collections.sort(list);
+        Collections.reverse(list);
         return list;
     }
 }
