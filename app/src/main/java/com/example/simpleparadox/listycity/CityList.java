@@ -77,4 +77,11 @@ public class CityList {
     public int countCities() {
         return cities.size();
     }
+
+    /**
+     * Sorts city list by city name
+     */
+    public void sortCities(){
+
+    }
 }

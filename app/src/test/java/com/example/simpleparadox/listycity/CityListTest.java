@@ -93,4 +93,18 @@ class CityListTest {
 
         assertEquals(1, cityList.countCities());
     }
+
+    @Test
+    void testSortCity() {
+        CityList cityList = mockCityList();
+
+        City city = new City("Charlottetown", "Prince Edward Island");
+        cityList.add(city);
+
+        City prevFirst = cityList.getCities().get(0);
+        cityList.sortCities();
+        City currentFirst = cityList.getCities().get(0);
+
+        assertNotEquals(0, prevFirst.compareTo(currentFirst));
+    }
 }
