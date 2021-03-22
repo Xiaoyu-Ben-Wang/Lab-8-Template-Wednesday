@@ -1,7 +1,9 @@
 package com.example.simpleparadox.listycity;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -76,5 +78,14 @@ public class CityList {
      */
     public int countCities() {
         return cities.size();
+    }
+
+    /**
+     * Sorts city list by city name reversed and returns city list
+     */
+    public List<City> getCitiesReverse(){
+        List<City> list = cities;
+        Collections.sort(list);
+        return list;
     }
 }
